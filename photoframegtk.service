@@ -1,0 +1,13 @@
+[Unit]
+Description=Photo Frame GTK service file
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /usr/bin/photoframegtk.py
+Restart=always
+User=root
+Group=root
+
+
+[Install]
+WantedBy=multi-user.target

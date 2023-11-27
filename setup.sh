@@ -2,7 +2,7 @@
 
 sudo apt update;
 sudo apt dist-upgrade;
-sudo apt install libgtk-4-dev -y;
+sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-4.0 -y;
 
 
 CWD="/home/pipi/photo_frame_gtk/"

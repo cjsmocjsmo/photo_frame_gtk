@@ -1,11 +1,11 @@
 import gi
 gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, GObject, GLib
+from gi.repository import Gtk, GObject, GLib, Gdk
 import glob
 
 # Define the list of images
 
-images = glob.glob('/home/charliepi/Pictures/converted/*.jpg')
+images = glob.glob('/media/pipi/USB01/DeDuped01/*.jpg')
 # Initialize GTK
 Gtk.init()
 
@@ -18,6 +18,10 @@ window.add(image)
 
 # Set the initial image
 image.set_from_file(images[0])
+# current_index = 0
+color = Gdk.Color(red=0, green=0, blue=0)
+window.modify_bg(Gtk.StateType.NORMAL, color)
+# window.fullscreen()
 current_index = 0
 
 def show_next_image():

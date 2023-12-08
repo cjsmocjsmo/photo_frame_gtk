@@ -5,7 +5,9 @@ import glob
 
 # Define the list of images
 
-images = glob.glob('/media/pipi/USB01/DeDuped01/*.jpg')
+images = glob.glob('/media/pipi/USB01/Master_Master_Resize/*.jpg')
+# images = glob.glob('/home/charliepi/Pictures/converted/*.jpg')
+# images = glob.glob('/media/charliepi/F3FB-CFFB/Master_Master/*.jpg')
 # Initialize GTK
 Gtk.init()
 
@@ -21,7 +23,7 @@ image.set_from_file(images[0])
 # current_index = 0
 color = Gdk.Color(red=0, green=0, blue=0)
 window.modify_bg(Gtk.StateType.NORMAL, color)
-window.fullscreen()
+# window.fullscreen()
 current_index = 0
 
 def show_next_image():

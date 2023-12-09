@@ -5,7 +5,7 @@ import glob
 
 # Define the list of images
 
-images = glob.glob('/media/pipi/USB01/Master_Master_Resize/*.jpg')
+images = glob.glob('/media/pipi/USBMOVIES/Master_Master_Final/*.jpg')
 # images = glob.glob('/home/charliepi/Pictures/converted/*.jpg')
 # images = glob.glob('/media/charliepi/F3FB-CFFB/Master_Master/*.jpg')
 # Initialize GTK
@@ -37,7 +37,7 @@ def show_next_image():
         current_index = current_index + 1  # Assign the value of idx + 1 to current_index
         next_index = current_index
         image.set_from_file(images[next_index])
-        GLib.timeout_add(10000, show_next_image)
+        GLib.timeout_add(15000, show_next_image)
 
     else:
         # Reset to the first image
@@ -46,11 +46,11 @@ def show_next_image():
         next_index = current_index
         print(images[next_index])
         image.set_from_file(images[next_index])
-        GLib.timeout_add(10000, show_next_image)
+        GLib.timeout_add(15000, show_next_image)
 
 # Start the timer for the first image
 
-GLib.timeout_add(10000, show_next_image)
+GLib.timeout_add(15000, show_next_image)
 
 # Connect the window's destroy event to quit GTK
 window.connect('destroy', Gtk.main_quit)

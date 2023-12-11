@@ -5,7 +5,7 @@ import glob
 
 # Define the list of images
 
-images = glob.glob('/media/pi/USBMOVIES/Master_Master_Final/*.jpg')
+images = glob.glob('/media/pi/USBMOVIES/Master_Master_Resized/*.jpg')
 # images = glob.glob('/home/charliepi/Pictures/converted/*.jpg')
 # images = glob.glob('/media/charliepi/F3FB-CFFB/Master_Master/*.jpg')
 # Initialize GTK

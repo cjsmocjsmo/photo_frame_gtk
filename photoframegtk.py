@@ -23,7 +23,7 @@ image.set_from_file(images[0])
 # current_index = 0
 color = Gdk.Color(red=0, green=0, blue=0)
 window.modify_bg(Gtk.StateType.NORMAL, color)
-# window.fullscreen()
+window.fullscreen()
 current_index = 0
 
 def show_next_image():

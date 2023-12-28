@@ -5,7 +5,7 @@ After=network.target
 [Service]
 TimeoutStartSec=125
 ExecStartPre=/bin/sleep 120
-ExecStart=/usr/bin/python3 /usr/bin/photoframegtk.py
+ExecStart=/usr/bin/python3 /home/hpi/photo_frame_gtk/photoframegtk.py
 Restart=always
 User=root
 Group=root

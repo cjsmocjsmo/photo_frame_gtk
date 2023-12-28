@@ -2,9 +2,10 @@
 Description=Photo Frame GTK service file
 After=network.target
 
+[Timer]
+OnActiveSec=2min
+
 [Service]
-TimeoutStartSec=125
-ExecStartPre=/bin/sleep 120
 ExecStart=/usr/bin/python3 /home/hpi/photo_frame_gtk/photoframegtk.py
 Restart=always
 User=root

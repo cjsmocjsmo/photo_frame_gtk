@@ -1,13 +1,11 @@
 [Unit]
 Description=Photo Frame GTK service file
-After=network.target
-
-[Timer]
-OnActiveSec=2min
+After=graphical.target
 
 [Service]
+Type=simple
 ExecStart=/usr/bin/python3 /home/hpi/photo_frame_gtk/photoframegtk.py
-
+Enviroment=DISPLAY=:0
 User=root
 Group=root
 

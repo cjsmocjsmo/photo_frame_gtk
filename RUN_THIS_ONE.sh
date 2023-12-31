@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Install desktop file
-cp -pvr photo-frame-gtk-autostart.desktop /etc/xdg/autostart/;
+sudo cp -pvr photo-frame-gtk-autostart.desktop /etc/xdg/autostart/;
 sudo chown root:root /etc/xdg/autostart/photo-frame-gtk-autostart.desktop;
 sudo reboot;
 

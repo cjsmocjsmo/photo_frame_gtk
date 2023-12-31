@@ -3,9 +3,7 @@ Description=Photo Frame GTK service file
 After=graphical.target
 
 [Service]
-Type=simple
-ExecStart=/usr/bin/python3 /home/hpi/photo_frame_gtk/photoframegtk.py
-Enviroment=DISPLAY=:0
+ExecStart=DISPLAY=:0 /usr/bin/python3 /home/hpi/photo_frame_gtk/photoframegtk.py
 User=root
 Group=root
 

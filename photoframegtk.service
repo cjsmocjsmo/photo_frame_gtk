@@ -1,12 +1,13 @@
 [Unit]
 Description=Photo Frame GTK service file
-After=graphical.target
+After=graphical-session.target
 
 [Service]
-ExecStart=DISPLAY=:0 /usr/bin/python3 /home/hpi/photo_frame_gtk/photoframegtk.py
-User=root
-Group=root
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/usr/bin/python3 /home/hpi/photo_frame_gtk/photoframegtk.py
 
+User=hpi
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=graphical-session.target

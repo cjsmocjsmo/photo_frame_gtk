@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=PhotoFrameGtk
+Terminal=false
+Exec=/home/hpi/photo_frame_gtk/photo_frame_gtk_start.sh
+Type=Application
+Catagories=Utility

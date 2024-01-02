@@ -1,6 +1,14 @@
-To run the program use the below command
+When testing comment out line 27 to disable fullscreen mode.
+Then to run the program use the below command
 
 DISPLAY=:0 nohup /usr/bin/python3 photoframegtk.py
 
 this detaches the process from the main terminal thread
 so you can close the terminal without killing the process
+
+To stop autostart remove:
+
+sudo rm /etc/xdg/autostart/photo-frame-gtk-autostart.desktop
+sudo reboot
+
+To enable autostart run the RUN_THIS_ONE.sh script.

@@ -1,4 +1,7 @@
 When testing comment out line 27 to disable fullscreen mode.
+This makes the window controls visible so you can close the window
+when done testing.
+
 Then to run the program use the below command
 
 DISPLAY=:0 nohup /usr/bin/python3 photoframegtk.py
@@ -6,7 +9,7 @@ DISPLAY=:0 nohup /usr/bin/python3 photoframegtk.py
 this detaches the process from the main terminal thread
 so you can close the terminal without killing the process
 
-To stop autostart remove:
+To stop autostart:
 
 sudo rm /etc/xdg/autostart/photo-frame-gtk-autostart.desktop
 sudo reboot

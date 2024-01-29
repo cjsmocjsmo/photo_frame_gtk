@@ -1,10 +1,17 @@
+import os
 import gi
 gi.require_version('Gtk', '3.0')
 from gi.repository import Gtk, GObject, GLib, Gdk
-import glob
 
 # Define the list of images
-images = glob.glob('/home/hpi/Pictures/photo_frame_images/*.jpg')
+images = []
+ptm = '/media/pi/USBMOVIES/Master_Split'
+for (paths, dirs, files) in os.walk(ptm, followlinks=True):
+      for filename in files:
+            print("Processing:\n %s" % filename)
+            fnn = os.path.join(paths, filename)
+            images.append(fnn)
+
 
 # Initialize GTK
 Gtk.init()
@@ -19,7 +26,7 @@ window.add(image)
 # Set the initial image
 image.set_from_file(images[0])
 
-# Set background color to black
+#
 color = Gdk.Color(red=0, green=0, blue=0)
 window.modify_bg(Gtk.StateType.NORMAL, color)
 
@@ -36,6 +43,7 @@ def show_next_image():
     if current_index + 1 < len(images):
         current_index = current_index + 1  # Assign the value of idx + 1 to current_index
         next_index = current_index
+
         image.set_from_file(images[next_index])
         GLib.timeout_add(20000, show_next_image)
 

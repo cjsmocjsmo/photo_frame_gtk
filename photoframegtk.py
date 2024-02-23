@@ -5,7 +5,7 @@ from gi.repository import Gtk, GObject, GLib, Gdk
 
 # Define the list of images
 images = []
-ptm = '/media/pi/USBMOVIES/MasterPicsResize'
+ptm = '/home/pi/Pictures/MasterPicsResize'
 for (paths, dirs, files) in os.walk(ptm, followlinks=True):
       for filename in files:
             print("Processing:\n %s" % filename)

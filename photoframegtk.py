@@ -45,7 +45,7 @@ def show_next_image():
         next_index = current_index
 
         image.set_from_file(images[next_index])
-        GLib.timeout_add(20000, show_next_image)
+        GLib.timeout_add(30000, show_next_image)
 
     else:
         # Reset to the first image
